@@ -1,0 +1,13 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.admin-table th {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.status-active { color: green; }
+.status-inactive { color: red; }

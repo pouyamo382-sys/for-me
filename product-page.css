@@ -1,0 +1,167 @@
+/* =========================================
+   PRODUCT PAGE - PROFESSIONAL UI/UX
+========================================= */
+
+/* فاصله کلی صفحه */
+main {
+  padding-bottom: 80px;
+}
+
+/* =====================
+   SECTION HEADERS
+===================== */
+.special-products h2,
+.product-grid h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.special-products h2::after,
+.product-grid h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary);
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 5px;
+}
+
+/* =====================
+   SPECIAL PRODUCTS
+===================== */
+.special-products {
+  background: linear-gradient(
+    180deg,
+    var(--background),
+    rgba(255,255,255,0.6)
+  );
+  padding: 60px 20px;
+  border-radius: 0 0 50px 50px;
+}
+
+/* =====================
+   PRODUCT CARDS
+===================== */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--surface);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* =====================
+   IMAGE
+===================== */
+.product-card img {
+  height: 220px;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =====================
+   TEXT
+===================== */
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.product-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--tertiary);
+  margin: 12px 0;
+}
+
+/* =====================
+   BUTTON
+===================== */
+.product-card .md-btn {
+  width: 100%;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.product-card .md-btn:hover {
+  background-color: var(--tertiary);
+}
+
+/* =====================
+   GRID IMPROVEMENT
+===================== */
+.product-cards,
+.product-grid .grid-container {
+  gap: 30px;
+}
+
+/* =====================
+   BADGE (ویژه)
+===================== */
+.special-products .product-card::after {
+  content: "ویژه";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--secondary);
+  color: var(--on-primary);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media screen and (max-width: 768px) {
+  .special-products {
+    padding: 40px 15px;
+  }
+
+  .special-products h2,
+  .product-grid h2 {
+    font-size: 28px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}

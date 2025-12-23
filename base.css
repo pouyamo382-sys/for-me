@@ -1,0 +1,39 @@
+:root {
+  --primary: #054a29;
+  --secondary: #b5d24b;
+  --tertiary: #04a777;
+  --accent: #ede580;
+  --background: #d7e7c6;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --on-primary: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: right;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  text-align: right;
+}
+
+textarea { resize: vertical; }
